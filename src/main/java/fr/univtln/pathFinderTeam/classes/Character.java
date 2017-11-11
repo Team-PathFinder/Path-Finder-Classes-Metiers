@@ -1,4 +1,4 @@
-package classes;
+package fr.univtln.pathFinderTeam.classes;
 
 import lombok.Data;
 

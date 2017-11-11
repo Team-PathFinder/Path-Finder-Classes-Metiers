@@ -1,6 +1,5 @@
 package fr.univtln.pathFinderTeam.classes;
 
-
 import lombok.Data;
 
 import javax.persistence.Entity;
