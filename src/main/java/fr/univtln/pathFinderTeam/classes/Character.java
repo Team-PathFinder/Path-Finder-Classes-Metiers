@@ -1,11 +1,11 @@
 package classes;
 
+import fr.univtln.pathFinderTeam.classes.LevelClass;
+import fr.univtln.pathFinderTeam.classes.Race;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 public @Data class Character {
@@ -13,6 +13,12 @@ public @Data class Character {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int Id;
+
+    @ManyToOne
+    private Race race;
+
+    @ManyToMany
+    private Collection<LevelClass> levels;
 
     private String name;
     private String gender;
