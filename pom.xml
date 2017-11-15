@@ -168,5 +168,13 @@
             <version>2.7.4</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator-cdi</artifactId>
+            <version>6.0.4.Final</version>
+        </dependency>
+
+
+
     </dependencies>
 </project>
