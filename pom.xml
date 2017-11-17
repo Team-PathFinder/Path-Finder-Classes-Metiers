@@ -61,6 +61,7 @@
     <!-- ADAPTER les coordonnées -->
     <groupId>fr.univtln.pathFinderTeam</groupId>
     <artifactId>Path-Finder-Classes-Metiers</artifactId>
+    <version>0.7.30-dev-171</version>
 
     <packaging>jar</packaging>
     <!-- ADAPTER les coordonnées -->
