@@ -1,5 +1,12 @@
 package fr.univtln.pathFinderTeam.classes;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> refs/heads/release-testBintrayDepoyment
+>>>>>>> master
 import lombok.Data;
 
 import javax.persistence.Entity;

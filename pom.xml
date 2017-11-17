@@ -192,7 +192,15 @@
             <version>6.0.4.Final</version>
         </dependency>
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> refs/heads/release-testBintrayDepoyment
+>>>>>>> master
     </dependencies>
 </project>
