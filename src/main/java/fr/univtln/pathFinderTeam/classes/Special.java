@@ -1,6 +1,10 @@
 package fr.univtln.pathFinderTeam.classes;
 
 import lombok.Data;
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/heads/release-testBintrayDepoyment
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
