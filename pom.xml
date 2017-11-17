@@ -15,74 +15,42 @@
 
 
     <!--ici c'est la que tout se joue avec bintray-->
-    <!--<repositories>-->
-        <!--<repository>-->
-            <!--<snapshots>-->
-                <!--<enabled>false</enabled>-->
-            <!--</snapshots>-->
-            <!--<id>bintray-tpf-Path-finder-Classes-Metiers</id>-->
-            <!--<name>bintray</name>-->
-            <!--<url>https://dl.bintray.com/tpf/Path-finder-Classes-Metiers</url>-->
-        <!--</repository>-->
-    <!--</repositories>-->
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-tpf-Path-finder-Classes-Metiers</id>
+            <name>bintray</name>
+            <url>https://dl.bintray.com/tpf/Path-finder-Classes-Metiers</url>
+        </repository>
+    </repositories>
 
-    <!--<pluginRepositories>-->
-        <!--<pluginRepository>-->
-            <!--<snapshots>-->
-                <!--<enabled>false</enabled>-->
-            <!--</snapshots>-->
-            <!--<id>bintray-tpf-Path-finder-Classes-Metiers</id>-->
-            <!--<name>bintray-plugins</name>-->
-            <!--<url>https://dl.bintray.com/tpf/Path-finder-Classes-Metiers</url>-->
-        <!--</pluginRepository>-->
-    <!--</pluginRepositories>-->
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-tpf-Path-finder-Classes-Metiers</id>
+            <name>bintray-plugins</name>
+            <url>https://dl.bintray.com/tpf/Path-finder-Classes-Metiers</url>
+        </pluginRepository>
+    </pluginRepositories>
 
-    <!--&lt;!&ndash;truc d'ysee a changer&ndash;&gt;-->
-    <!--<profiles>-->
-        <!--<profile>-->
-            <!--<id>stage-devel-bintray</id>-->
-            <!--<distributionManagement>-->
-                <!--<repository>-->
-                    <!--<id>bintray-ymrepos-public</id>-->
-                    <!--<name>ymrepos-public</name>-->
-                    <!--<url>https://api.bintray.com/maven/ymrepos/public/${projectShortName}/;publish=1</url>-->
-                <!--</repository>-->
-            <!--</distributionManagement>-->
-        <!--</profile>-->
-    <!--</profiles>-->
+    <!--truc d'ysee a changer-->
+    <profiles>
+        <profile>
+            <id>stage-devel-bintray</id>
+            <distributionManagement>
+                <repository>
+                    <id>bintray-Team-Path-Finder-public</id>
+                    <name>Team-Path-Finder-public</name>
+                    <url>https://api.bintray.com/maven/Team-Path-Finder/public/${projectShortName}/;publish=1</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 
-    <settings xsi:schemaLocation='http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd'
-              xmlns='http://maven.apache.org/SETTINGS/1.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
-
-        <profiles>
-            <profile>
-                <repositories>
-                    <repository>
-                        <snapshots>
-                            <enabled>false</enabled>
-                        </snapshots>
-                        <id>bintray-tpf-Path-finder-Classes-Metiers</id>
-                        <name>bintray</name>
-                        <url>https://dl.bintray.com/tpf/Path-finder-Classes-Metiers</url>
-                    </repository>
-                </repositories>
-                <pluginRepositories>
-                    <pluginRepository>
-                        <snapshots>
-                            <enabled>false</enabled>
-                        </snapshots>
-                        <id>bintray-tpf-Path-finder-Classes-Metiers</id>
-                        <name>bintray-plugins</name>
-                        <url>https://dl.bintray.com/tpf/Path-finder-Classes-Metiers</url>
-                    </pluginRepository>
-                </pluginRepositories>
-                <id>bintray</id>
-            </profile>
-        </profiles>
-        <activeProfiles>
-            <activeProfile>bintray</activeProfile>
-        </activeProfiles>
-    </settings>
 
     <parent>
         <groupId>fr.univtln.bruno.pom</groupId>
