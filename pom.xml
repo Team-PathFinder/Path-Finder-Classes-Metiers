@@ -7,32 +7,75 @@
         <projectShortName>Path-Finder-Classes-Metiers</projectShortName>
         <github.account>clemzux</github.account>
         <!-- utln login for nexus (maven and docker ) repository on lsis -->
-        <lsisnexus.login>emmanuel.bruno@univ-tln.fr</lsisnexus.login>
+        <lsisnexus.login>farge.clement@gmail.com</lsisnexus.login>
         <!-- the default Main class -->
-        <app.main.class>fr.univtln.bruno.test.App</app.main.class>
+        <!--<app.main.class>fr.univtln.bruno.test.App</app.main.class>-->
     </properties>
     <!-- ADAPTER LES PROPRIETES SUIVANTES -->
 
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-dptinfoutln-public</id>
-            <name>bintray</name>
-            <url>https://dl.bintray.com/dptinfoutln/public</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-dptinfoutln-public</id>
-            <name>bintray-plugins</name>
-            <url>https://dl.bintray.com/dptinfoutln/public</url>
-        </pluginRepository>
-    </pluginRepositories>
+
+    <!--ici c'est la que tout se joue avec bintray-->
+    <!--<repositories>-->
+        <!--<repository>-->
+            <!--<snapshots>-->
+                <!--<enabled>false</enabled>-->
+            <!--</snapshots>-->
+            <!--<id>bintray-tpf-Path-finder-Classes-Metiers</id>-->
+            <!--<name>bintray</name>-->
+            <!--<url>https://dl.bintray.com/tpf/Path-finder-Classes-Metiers</url>-->
+        <!--</repository>-->
+    <!--</repositories>-->
+
+    <!--<pluginRepositories>-->
+        <!--<pluginRepository>-->
+            <!--<snapshots>-->
+                <!--<enabled>false</enabled>-->
+            <!--</snapshots>-->
+            <!--<id>bintray-tpf-Path-finder-Classes-Metiers</id>-->
+            <!--<name>bintray-plugins</name>-->
+            <!--<url>https://dl.bintray.com/tpf/Path-finder-Classes-Metiers</url>-->
+        <!--</pluginRepository>-->
+    <!--</pluginRepositories>-->
+
+    <!--&lt;!&ndash;truc d'ysee a changer&ndash;&gt;-->
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>stage-devel-bintray</id>-->
+            <!--<distributionManagement>-->
+                <!--<repository>-->
+                    <!--<id>bintray-ymrepos-public</id>-->
+                    <!--<name>ymrepos-public</name>-->
+                    <!--<url>https://api.bintray.com/maven/ymrepos/public/${projectShortName}/;publish=1</url>-->
+                <!--</repository>-->
+            <!--</distributionManagement>-->
+        <!--</profile>-->
+    <!--</profiles>-->
+
+    <profiles>
+        <profile>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>bintray-tpf-Path-finder-Classes-Metiers</id>
+                    <name>bintray</name>
+                    <url>https://dl.bintray.com/tpf/Path-finder-Classes-Metiers</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>bintray-tpf-Path-finder-Classes-Metiers</id>
+                    <name>bintray-plugins</name>
+                    <url>https://dl.bintray.com/tpf/Path-finder-Classes-Metiers</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <id>bintray</id>
+        </profile>
+    </profiles>
 
     <parent>
         <groupId>fr.univtln.bruno.pom</groupId>
@@ -50,12 +93,12 @@
     <!-- ADAPTER les métadonnées -->
     <name>Path-Finder-Classes-Metiers</name>
     <description />
-    <url>https://${github.account}.github.io/helloworld/</url>
+    <!--<url>https://${github.account}.github.io/helloworld/</url>-->
+    <url>https://Team-PathFinder.github.io/Path-Finder-Classes-Metiers/</url>
     <inceptionYear>2017</inceptionYear>
 
     <organization>
-        <name>Université de Toulon</name>
-        <url>http://www.univ-tln.fr</url>
+        <name>Team-PathFinder</name>
     </organization>
 
     <!--developers>
