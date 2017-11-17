@@ -61,7 +61,11 @@
     <!-- ADAPTER les coordonnées -->
     <groupId>fr.univtln.pathFinderTeam</groupId>
     <artifactId>Path-Finder-Classes-Metiers</artifactId>
+<<<<<<< HEAD
     <version>testBintrayDepoyment</version>
+=======
+    <version>1.1-SNAPSHOT</version>
+>>>>>>> development
     <packaging>jar</packaging>
     <!-- ADAPTER les coordonnées -->
 
