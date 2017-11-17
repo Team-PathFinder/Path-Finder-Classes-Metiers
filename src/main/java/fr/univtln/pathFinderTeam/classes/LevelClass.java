@@ -2,26 +2,6 @@ package fr.univtln.pathFinderTeam.classes;
 
 import lombok.Data;
 
-<<<<<<< HEAD
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public @Data class LevelClass {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int Id;
-
-    private String name;
-    private String description;
-    private int BBA;
-    private int reflex;
-    private int vigor;
-    private int will;
-=======
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -69,5 +49,4 @@ public @Data class LevelClass {
         this.will = will;
         this.level = level;
     }
->>>>>>> refs/heads/release-testBintrayDepoyment
 }
