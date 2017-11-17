@@ -11,7 +11,30 @@
         <!-- the default Main class -->
         <!--<app.main.class>fr.univtln.bruno.test.App</app.main.class>-->
     </properties>
-    <!-- ADAPTER LES PROPRIETES SUIVANTES -->
+
+    <!-- ADAPTER les coordonnées -->
+    <groupId>fr.univtln.vfh</groupId>
+    <artifactId>pathFinderClassesMetiers</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <!-- ADAPTER les coordonnées -->
+
+    <!-- ADAPTER les métadonnées -->
+    <name>Path-Finder-Classes-Metiers</name>
+    <description />
+    <url>https://$Team-PathFinder.github.io/Path-Finder-Classes-Metiers/</url>
+    <inceptionYear>2017</inceptionYear>
+
+    <organization>
+        <name>Université de Toulon</name>
+        <url>http://www.univ-tln.fr</url>
+    </organization>
+
+    <parent>
+        <groupId>fr.univtln.bruno.pom</groupId>
+        <artifactId>common-pom</artifactId>
+        <version>0.7.30-dev-171</version>
+    </parent>
 
 
     <!--ici c'est la que tout se joue avec bintray-->
@@ -51,6 +74,7 @@
         <!--</profile>-->
     <!--</profiles>-->
 
+    <!--section de bintray-->
     <profiles>
         <profile>
             <repositories>
@@ -77,46 +101,8 @@
         </profile>
     </profiles>
 
-    <parent>
-        <groupId>fr.univtln.bruno.pom</groupId>
-        <artifactId>common-pom</artifactId>
-        <version>0.7.30-dev-171</version>
-    </parent>
+    <!---->
 
-    <!-- ADAPTER les coordonnées -->
-    <groupId>fr.univtln.pathFinderTeam</groupId>
-    <artifactId>Path-Finder-Classes-Metiers</artifactId>
-    <version>0.7.30-dev-171</version>
-    <packaging>jar</packaging>
-    <!-- ADAPTER les coordonnées -->
-
-    <!-- ADAPTER les métadonnées -->
-    <name>Path-Finder-Classes-Metiers</name>
-    <description />
-    <!--<url>https://${github.account}.github.io/helloworld/</url>-->
-    <url>https://Team-PathFinder.github.io/Path-Finder-Classes-Metiers/</url>
-    <inceptionYear>2017</inceptionYear>
-
-    <organization>
-        <name>Team-PathFinder</name>
-    </organization>
-
-    <!--developers>
-        <developer>
-            <id>emmanuelbruno</id>
-            <name>Emmanuel Bruno</name>
-            <email>bruno@univ-tln.fr</email>
-            <url>http://bruno.univ-tln.fr</url>
-            <organization>Université de Toulon</organization>
-            <organizationUrl>http://www.univ-tln.fr</organizationUrl>
-            <roles>
-                <role>architect</role>
-                <role>developer</role>
-            </roles>
-            <timezone>Europe/Paris</timezone>
-        </developer>
-    </developers-->
-    <!-- ADAPTER les métadonnées -->
 
     <build>
         <plugins>
@@ -133,6 +119,14 @@
                             </includes>
                         </filter>
                     </filters>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -153,17 +147,20 @@
             <artifactId>junit-jupiter-api</artifactId>
             <scope>test</scope>
         </dependency>
+
         <!-- Only required to run tests in an IntelliJ IDEA that bundles an older version -->
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-launcher</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
@@ -216,8 +213,6 @@
             <artifactId>hibernate-validator-cdi</artifactId>
             <version>6.0.4.Final</version>
         </dependency>
-
-
 
     </dependencies>
 </project>
