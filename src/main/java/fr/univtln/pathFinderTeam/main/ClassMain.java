@@ -14,43 +14,45 @@ import java.util.List;
 public class ClassMain {
 
     public static void main(String[] args) {
-        LevelClass levelClass = new LevelClass();
-        levelClass.setName("barbare");
-        levelClass.setLevel(1);
-        levelClass.setBBA(0);
-        levelClass.setDescription("barbare 1");
-        levelClass.setReflex(0);
-        levelClass.setVigor(2);
-        levelClass.setWill(0);
+        LevelClass levelClass = new LevelClass.Builder()
+                .setName("barbare")
+                .setLevel(1)
+                .setBBA(0)
+                .setDescription("barbare 1")
+                .setReflex(0)
+                .setVigor(2)
+                .setWill(0)
+                .build();
 
 
-        LevelClass levelClass1 = new LevelClass();
-        levelClass1.setName("barbare");
-        levelClass1.setLevel(2);
-        levelClass1.setBBA(2);
-        levelClass1.setDescription("barbare 2");
-        levelClass1.setReflex(0);
-        levelClass1.setVigor(3);
-        levelClass1.setWill(0);
 
-        RPCharacter character1 = new RPCharacter();
-        character1.setName("Grognar");
-        character1.setAge(23);
-        character1.setConstitution(14);
-        character1.setCharisma(18);
-        character1.setDexterity(12);
-        character1.setHealthpoint(8);
-        character1.setIntelligence(8);
-        character1.setWisdom(8);
-        character1.setStrength(10);
-        character1.setGender("male");
+        LevelClass levelClass1 = new LevelClass.Builder()
+                .setName("barbare")
+                .setLevel(2)
+                .setBBA(2)
+                .setDescription("barbare 2")
+                .setReflex(0)
+                .setVigor(3)
+                .setWill(0)
+                .build();
+
 
         Race race = new Race();
         race.setName("dwarf");
+
+        RPCharacter character1 = new RPCharacter.Builder()
+                .setName("Grognar")
+                .setAge(23)
+                .setCharisma(18)
+                .setDexterity(12)
+                .sethitpoint(8)
+                .setIntelligence(8)
+                .setWisdom(9)
+                .setStrength(10)
+                .setGender("male")
+                .build();
+
         character1.setRace(race);
-
-
-
 
         List<LevelClass> levels = new ArrayList<>();
         character1.setLevels(levels);
@@ -58,6 +60,14 @@ public class ClassMain {
 
         character1.addLevelClass(levelClass1);
 
+
         System.out.println(character1.toString());
+
+        System.out.println("Validation character : \n");
+        System.out.println("    Character 1 : " + character1.isValid() + "\n");
+        System.out.println("Validation levelclass : \n");
+        System.out.println("    LevelClass  : " + levelClass.isValid() + "\n");
+        System.out.println("    LevelClass 1 : " + levelClass1.isValid() + "\n");
+
     }
 }

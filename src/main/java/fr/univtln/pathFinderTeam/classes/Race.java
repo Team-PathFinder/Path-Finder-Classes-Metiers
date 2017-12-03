@@ -25,4 +25,10 @@ public @Data class Race {
     public Race(@NotNull String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "\n   Id : " + Id +
+                "\n   Name : " + name;
+    }
 }
