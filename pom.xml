@@ -201,16 +201,25 @@
 
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
-            <artifactId>eclipselink</artifactId>
-            <version>2.5.1</version>
+            <artifactId>javax.persistence</artifactId>
+            <version>2.2.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.0.Final</version>
+        </dependency>
+
+        <!--
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.18</version>
             <scope>provided</scope>
         </dependency>
+        -->
+
 
         <!--dependances serialisation json-->
 
@@ -238,29 +247,30 @@
             <version>2.7.4</version>
         </dependency>
 
-        <!--
-        <dependency>
+
+        <!--<dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator-cdi</artifactId>
             <version>6.0.4.Final</version>
         </dependency> -->
 
+        <!--
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-        </dependency>
+        </dependency> -->
 
         <!-- Hibernate For connection pooling -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-c3p0</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!-- Bean validation -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-        </dependency>
+        </dependency> -->
 
         <!-- Use for Validation Unit Tests-->
         <dependency>

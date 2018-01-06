@@ -1,15 +1,13 @@
 package fr.univtln.pathFinderTeam.classes;
 
-import lombok.Data;
 
 import javax.persistence.*;
-import javax.validation.Validation;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
+
 import java.util.List;
 
 @Entity
-public @Data class RPCharacter {
+public class RPCharacter {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,37 +17,37 @@ public @Data class RPCharacter {
     private Race race;
 
     @ManyToMany
-    @NotNull
+    @Column(nullable = false)
     private List<LevelClass> levels;
 
-    @NotNull
+    @Column(nullable = false)
     private String name;
 
-    @NotNull
+    @Column(nullable = false)
     private String gender;
 
-    @NotNull @Min(1)
+    @Column(nullable = false) @Min(1)
     private int age;
 
-    @NotNull @Min(-10)
+    @Column(nullable = false) @Min(-10)
     private int hitpoint;
 
-    @NotNull @Min(0)
+    @Column(nullable = false) @Min(0)
     private int strength;
 
-    @NotNull @Min(0)
+    @Column(nullable = false) @Min(0)
     private int dexterity;
 
-    @NotNull @Min(0)
+    @Column(nullable = false) @Min(0)
     private int constitution;
 
-    @NotNull @Min(0)
+    @Column(nullable = false) @Min(0)
     private int intelligence;
 
-    @NotNull @Min(0)
+    @Column(nullable = false) @Min(0)
     private int wisdom;
 
-    @NotNull @Min(0)
+    @Column(nullable = false) @Min(0)
     private int charisma;
 
     public RPCharacter() {
@@ -87,68 +85,12 @@ public @Data class RPCharacter {
         }
     }
 
-    public void addStrenght(){
-        this.strength += 1;
-    }
-
-    public void subStrenght(){
-        this.strength -= 1;
-    }
-
-    public void addDexterity(){
-        this.dexterity += 1;
-    }
-
-    public void subDexterity(){
-        this.dexterity -= 1;
-    }
-
-    public void addConstitution(){
-        this.constitution += 1;
-    }
-
-    public void subConstitution(){
-        this.constitution -= 1;
-    }
-
-    public void addIntelligence(){
-        this.intelligence += 1;
-    }
-
-    public void subIntelligence(){
-        this.intelligence -= 1;
-    }
-
-    public void addWisdom(){
-        this.wisdom += 1;
-    }
-
-    public void subWisdom(){
-        this.wisdom -= 1;
-    }
-
-    public void addSCharisma(){
-        this.charisma += 1;
-    }
-
-    public void subCharisma(){
-        this.charisma -= 1;
-    }
-
-    public void addHitpoint(int n){
-        this.hitpoint += n;
-    }
-
-    public void subHitpoint(int n){
-        this.hitpoint -= n;
-    }
-
-    public Boolean isValid(){
+    /*public Boolean isValid(){
         return Validation.buildDefaultValidatorFactory()
                 .getValidator()
                 .validate(this)
                 .size() == 0;
-    }
+    }*/
 
 
     @Override
@@ -266,6 +208,110 @@ public @Data class RPCharacter {
             this.charisma = charisma;
             return this;
         }
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public Race getRace() {
+        return race;
+    }
+
+    public List<LevelClass> getLevels() {
+        return levels;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getHitpoint() {
+        return hitpoint;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public int getDexterity() {
+        return dexterity;
+    }
+
+    public int getConstitution() {
+        return constitution;
+    }
+
+    public int getIntelligence() {
+        return intelligence;
+    }
+
+    public int getWisdom() {
+        return wisdom;
+    }
+
+    public int getCharisma() {
+        return charisma;
+    }
+
+    public void setId(int id) {
+        Id = id;
+    }
+
+    public void setRace(Race race) {
+        this.race = race;
+    }
+
+    public void setLevels(List<LevelClass> levels) {
+        this.levels = levels;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setHitpoint(int hitpoint) {
+        this.hitpoint = hitpoint;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public void setDexterity(int dexterity) {
+        this.dexterity = dexterity;
+    }
+
+    public void setConstitution(int constitution) {
+        this.constitution = constitution;
+    }
+
+    public void setIntelligence(int intelligence) {
+        this.intelligence = intelligence;
+    }
+
+    public void setWisdom(int wisdom) {
+        this.wisdom = wisdom;
+    }
+
+    public void setCharisma(int charisma) {
+        this.charisma = charisma;
     }
 }
 

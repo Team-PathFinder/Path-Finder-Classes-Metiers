@@ -1,15 +1,11 @@
 package fr.univtln.pathFinderTeam.classes;
 
-import lombok.Data;
 
 import javax.persistence.*;
-import javax.validation.Validation;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.util.Collection;
 
 @Entity
-public @Data class LevelClass {
+public class LevelClass {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,24 +14,24 @@ public @Data class LevelClass {
     @ManyToMany
     private Collection<Special> specials;
 
-    @NotNull
+    @Column(nullable = false)
     private String name;
 
     private String description;
 
-    @NotNull
+    @Column(nullable = false)
     private int BBA;
 
-    @NotNull
+    @Column(nullable = false)
     private int reflex;
 
-    @NotNull
+    @Column(nullable = false)
     private int vigor;
 
-    @NotNull
+    @Column(nullable = false)
     private int will;
 
-    @NotNull
+    @Column(nullable = false)
     private int level;
 
     public LevelClass() {}
@@ -52,12 +48,12 @@ public @Data class LevelClass {
     }
 
 
-    public Boolean isValid(){
+    /*public Boolean isValid(){
         return Validation.buildDefaultValidatorFactory()
                 .getValidator()
                 .validate(this)
                 .size() == 0;
-    }
+    }*/
 
 
     @Override
@@ -141,5 +137,77 @@ public @Data class LevelClass {
             this.level = level;
             return this;
         }
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public Collection<Special> getSpecials() {
+        return specials;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getBBA() {
+        return BBA;
+    }
+
+    public int getReflex() {
+        return reflex;
+    }
+
+    public int getVigor() {
+        return vigor;
+    }
+
+    public int getWill() {
+        return will;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setId(int id) {
+        Id = id;
+    }
+
+    public void setSpecials(Collection<Special> specials) {
+        this.specials = specials;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setBBA(int BBA) {
+        this.BBA = BBA;
+    }
+
+    public void setReflex(int reflex) {
+        this.reflex = reflex;
+    }
+
+    public void setVigor(int vigor) {
+        this.vigor = vigor;
+    }
+
+    public void setWill(int will) {
+        this.will = will;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 }

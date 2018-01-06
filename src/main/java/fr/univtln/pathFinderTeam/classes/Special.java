@@ -1,26 +1,49 @@
 package fr.univtln.pathFinderTeam.classes;
 
-import lombok.Data;
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 @Entity
-public @Data class Special {
+public class Special {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int Id;
 
-    @NotNull
+    @Column(nullable = false)
     private String name;
 
-    @NotNull
+    @Column(nullable = false)
     private String description;
 
     public Special() {
     }
 
-    public Special(@NotNull String name, @NotNull String description) {
+    public Special(String name, String description) {
         this.name = name;
+        this.description = description;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setId(int id) {
+        Id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
         this.description = description;
     }
 }

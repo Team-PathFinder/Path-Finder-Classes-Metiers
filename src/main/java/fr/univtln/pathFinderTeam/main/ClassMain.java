@@ -63,11 +63,7 @@ public class ClassMain {
 
         System.out.println(character1.toString());
 
-        System.out.println("Validation character : \n");
-        System.out.println("    Character 1 : " + character1.isValid() + "\n");
-        System.out.println("Validation levelclass : \n");
-        System.out.println("    LevelClass  : " + levelClass.isValid() + "\n");
-        System.out.println("    LevelClass 1 : " + levelClass1.isValid() + "\n");
+
 
     }
 }
