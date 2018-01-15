@@ -8,11 +8,6 @@
             <username>tpf</username>
             <password>${env.BINTRAY_API_KEY}</password>
         </server>
-        <server>
-            <id>bintray-dptinfoutln-public</id>
-            <username>brunoe</username>
-            <password>${env.BINTRAY_API_KEY}</password>
-        </server>
 
         <server>
             <id>lsis-nexus</id>
@@ -31,9 +26,9 @@
                     <snapshots>
                         <enabled>false</enabled>
                     </snapshots>
-                    <id>bintray-tpf-teamPatFiinder</id>
+                    <id>bintray-clemzux-pathfinderproject</id>
                     <name>bintray</name>
-                    <url>https://dl.bintray.com/tpf/teamPatFiinder</url>
+                    <url>https://dl.bintray.com/clemzux/pathfinderproject</url>
                 </repository>
             </repositories>
             <pluginRepositories>
@@ -41,9 +36,9 @@
                     <snapshots>
                         <enabled>false</enabled>
                     </snapshots>
-                    <id>bintray-tpf-teamPatFiinder</id>
+                    <id>bintray-clemzux-pathfinderproject</id>
                     <name>bintray-plugins</name>
-                    <url>https://dl.bintray.com/tpf/teamPatFiinder</url>
+                    <url>https://dl.bintray.com/clemzux/pathfinderproject</url>
                 </pluginRepository>
             </pluginRepositories>
             <id>bintray</id>
@@ -59,29 +54,6 @@
                 <!-- generate a token in https://sonar.lsis.univ-tln.fr/account/security -->
                 <sonar.login>${env.SONAR_TOKEN}</sonar.login>
             </properties>
-        </profile>
-        <profile>
-            <id>bintray</id>
-            <repositories>
-                <repository>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                    <id>bintray-dptinfoutln-public</id>
-                    <name>bintray</name>
-                    <url>https://dl.bintray.com/dptinfoutln/public</url>
-                </repository>
-            </repositories>
-            <pluginRepositories>
-                <pluginRepository>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                    <id>bintray-dptinfoutln-public</id>
-                    <name>bintray-plugins</name>
-                    <url>https://dl.bintray.com/dptinfoutln/public</url>
-                </pluginRepository>
-            </pluginRepositories>
         </profile>
     </profiles>
     <activeProfiles>

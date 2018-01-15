@@ -5,7 +5,7 @@
     <properties>
         <!-- Le nom court du projet a utiliser pour github -->
         <projectShortName>Path-Finder-Classes-Metiers</projectShortName>
-        
+
         <github.account>clemzux</github.account>
         <!-- utln login for nexus (maven and docker ) repository on lsis -->
         <lsisnexus.login>farge.clement@gmail.com</lsisnexus.login>
@@ -21,9 +21,9 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-            <id>bintray-tpf-teamPatFiinder</id>
+            <id>bintray-clemzux-pathfinderproject</id>
             <name>bintray</name>
-            <url>https://dl.bintray.com/tpf/teamPatFiinder</url>
+            <url>https://dl.bintray.com/clemzux/pathfinderproject</url>
         </repository>
     </repositories>
 
@@ -32,9 +32,9 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-            <id>bintray-tpf-teamPatFiinder</id>
+            <id>bintray-clemzux-pathfinderproject</id>
             <name>bintray-plugins</name>
-            <url>https://dl.bintray.com/tpf/teamPatFiinder</url>
+            <url>https://dl.bintray.com/clemzux/pathfinderproject</url>
         </pluginRepository>
     </pluginRepositories>
 
@@ -44,9 +44,9 @@
             <id>stage-devel-bintray</id>
             <distributionManagement>
                 <repository>
-                    <id>bintray-tpf-teamPatFiinder</id>
-                    <name>tpf-teamPatFiinder</name>
-                    <url>https://api.bintray.com/maven/tpf/teamPatFiinder/${projectShortName}/;publish=1</url>
+                    <id>bintray-clemzux-pathfinderproject</id>
+                    <name>clemzux-pathfinderproject</name>
+                    <url>https://api.bintray.com/maven/clemzux/pathfinderproject/${projectShortName}/;publish=1</url>
                 </repository>
             </distributionManagement>
         </profile>
