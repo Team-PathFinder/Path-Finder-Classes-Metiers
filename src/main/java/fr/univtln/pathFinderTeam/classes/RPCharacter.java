@@ -13,10 +13,10 @@ public class RPCharacter {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int Id;
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.PERSIST)
     private Race race;
 
-    @ManyToMany
+    @ManyToMany(cascade=CascadeType.PERSIST)
     @Column(nullable = false)
     private List<LevelClass> levels;
 
@@ -80,6 +80,7 @@ public class RPCharacter {
                 if(levelClass.getName() == levels.get(i).getName() && levelClass.getLevel() -1 == levels.get(i).getLevel()){
                     this.levels.add(levelClass);
                     find = true;
+                    i++;
                 }
             }
         }

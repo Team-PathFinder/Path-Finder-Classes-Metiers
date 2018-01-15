@@ -11,7 +11,7 @@ public class LevelClass {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int Id;
 
-    @ManyToMany
+    @ManyToMany(cascade=CascadeType.PERSIST)
     private Collection<Special> specials;
 
     @Column(nullable = false)
