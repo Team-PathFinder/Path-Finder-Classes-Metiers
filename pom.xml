@@ -25,9 +25,29 @@
             <name>bintray</name>
             <url>https://dl.bintray.com/clemzux/pathfinderproject</url>
         </repository>
+
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-dptinfoutln-public</id>
+            <name>bintray</name>
+            <url>https://dl.bintray.com/dptinfoutln/public</url>
+        </repository>
+
     </repositories>
 
     <pluginRepositories>
+
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-dptinfoutln-public</id>
+            <name>bintray-plugins</name>
+            <url>https://dl.bintray.com/dptinfoutln/public</url>
+        </pluginRepository>
+
         <pluginRepository>
             <snapshots>
                 <enabled>false</enabled>
