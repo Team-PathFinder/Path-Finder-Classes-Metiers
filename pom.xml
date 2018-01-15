@@ -5,6 +5,7 @@
     <properties>
         <!-- Le nom court du projet a utiliser pour github -->
         <projectShortName>Path-Finder-Classes-Metiers</projectShortName>
+        
         <github.account>clemzux</github.account>
         <!-- utln login for nexus (maven and docker ) repository on lsis -->
         <lsisnexus.login>farge.clement@gmail.com</lsisnexus.login>
