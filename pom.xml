@@ -20,9 +20,9 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-            <id>bintray-tpf-Path-finder-Classes-Metiers</id>
+            <id>bintray-tpf-teamPatFiinder</id>
             <name>bintray</name>
-            <url>https://dl.bintray.com/tpf/Path-finder-Classes-Metiers</url>
+            <url>https://dl.bintray.com/tpf/teamPatFiinder</url>
         </repository>
     </repositories>
 
@@ -31,9 +31,9 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-            <id>bintray-tpf-Path-finder-Classes-Metiers</id>
+            <id>bintray-tpf-teamPatFiinder</id>
             <name>bintray-plugins</name>
-            <url>https://dl.bintray.com/tpf/Path-finder-Classes-Metiers</url>
+            <url>https://dl.bintray.com/tpf/teamPatFiinder</url>
         </pluginRepository>
     </pluginRepositories>
 
@@ -43,9 +43,9 @@
             <id>stage-devel-bintray</id>
             <distributionManagement>
                 <repository>
-                    <id>bintray-Team-Path-Finder-public</id>
-                    <name>Team-Path-Finder-public</name>
-                    <url>https://api.bintray.com/maven/Team-Path-Finder/public/${projectShortName}/;publish=1</url>
+                    <id>bintray-tpf-teamPatFiinder</id>
+                    <name>tpf-teamPatFiinder</name>
+                    <url>https://api.bintray.com/maven/tpf/teamPatFiinder/${projectShortName}/;publish=1</url>
                 </repository>
             </distributionManagement>
         </profile>

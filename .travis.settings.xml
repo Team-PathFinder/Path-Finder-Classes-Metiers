@@ -4,6 +4,11 @@
 			      https://maven.apache.org/xsd/settings-1.0.0.xsd">
     <servers>
         <server>
+            <id>bintray-tpf-teamPatFiinder</id>
+            <username>tpf</username>
+            <password>${env.BINTRAY_API_KEY}</password>
+        </server>
+        <server>
             <id>bintray-dptinfoutln-public</id>
             <username>brunoe</username>
             <password>${env.BINTRAY_API_KEY}</password>
@@ -19,6 +24,31 @@
     </servers>
 
     <profiles>
+
+        <profile>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>bintray-tpf-teamPatFiinder</id>
+                    <name>bintray</name>
+                    <url>https://dl.bintray.com/tpf/teamPatFiinder</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>bintray-tpf-teamPatFiinder</id>
+                    <name>bintray-plugins</name>
+                    <url>https://dl.bintray.com/tpf/teamPatFiinder</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <id>bintray</id>
+        </profile>
+
         <profile>
             <id>sonar</id>
             <activation>
