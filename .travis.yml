@@ -4,14 +4,11 @@ cache:
   directories:
   - "$HOME/.m2/repository"
   - "$HOME/.sonar/cache"
-
 before_install:
-#ignore gitflow commits except version tag
 - |
   if [[ "${TRAVIS_COMMIT_MESSAGE}" == "[gitflow]"* ]] && [[ "${TRAVIS_BRANCH}" != v[0-9]* ]]; then
     travis_terminate 0
   fi
-
 before_script:
 - cp .travis.settings.xml $HOME/.m2/settings.xml
 script:
@@ -36,13 +33,17 @@ after_success:
     ./.travis.scripts/mvn.sh -P github-site site  fi
 deploy:
   provider: script
-  script: "./.travis.scripts/mvn.sh -Dmaven.site.skip=true -P stage-devel-nexus deploy"
-  script: "./.travis.scripts/mvn.sh -Dmaven.site.skip=true -P stage-devel-bintray deploy"
+  script: "./.travis.scripts/mvn.sh -Dmaven.site.skip=true -P stage-devel-bintray
+    deploy"
   skip_cleanup: true
   on:
     all_branches: true
 branches:
-  except: # web site and version tag
+  except:
   - gh-pages
   - master
-#  - /^v[0-9]/
+env:
+  matrix:
+    secure: IwJmZqpenb7L+WHNaTC5u+cWQhp6RDCft7ngEAHbssZbO4YlehylgqTnj72NqPf2ml3h0N9brzfJURIBo1jrDSyoIZ1c3Z0lGTfTUVS0pzdJYNEe5nrsSE4OYbic06Vk/G+5HET5KQgmMB1+QfOE40z4AD5UK3hCVX9nx6JxiliUXS5o5pBCdFOjFotLjK5RRbSWTgPJ5/NhV6vZUAmk1e6GOUTeajnJoBO5SVRLl2Q+o8kL6rXxAxew5scIkSEm5Ug4WTQCb40FZkk3J1Lszfa0XdSv1e3b8MMkoNeVwvoG3G5yzKxXaIfJ2gX5fubOm408fmKka6nO7cbT8qo9pFDdSSa75uygm4d3Clx65yAhod11Nqy3/oZNYFe/fvF2h/4CyhFB3lr5f1xRjcOWP6AOZsR9v1TjNjhdMA9KSCIbD2fGpLYC+X719tc+b8AUkwKOh1Vl0fnX6U/Zp1F2MRlzzv2gElLQzGClaPLrcJ12TxJIfA6RFjq5Be/SXG/P+m5a6I+VSjo/XgQB+bhFS5Ll4d9R0+hgaE9ShXDLfFSuIT/8sNvCjqVKkyRFuApmMd6siePHrxHYh4CD6Hv0GP4qDaExCbVQnWTjlRb/JR8ZOkX75d3AMq+54qo9sLuS1u/1Jwfcl0iMULylIl/C61TfdLnWRhgMxu37UFsoIzg=
+  global:
+    secure: wqXmpvLuhlzQQq1Uqc9gSxmBGfmdB+SLhHrIBKwyGAPz+6ELRnCfzJ2g3yiJXqxJ5aVjCb+QAeZWY07kpEcGHj6LqsM3QqCUUDxoEV+nrS0vxmCNEXst/jIvcLBWQRQxdeosqCkJJm/kh2DCckANxbspMinVO2ZUDJj2k54oiXoMBqT3m2Cq4ezx+ITKDT8XC5I6J7NDHMXUcIId7GpJO1U9FExpBeGvEKbs9l1FYB1XHU9wtIaHc5E4YoQD9KkVqQlh8L/rQ2V8cmW+d3Mipzj6YVqlFchwn9EJhN9DmXm9IsaksncDm0MoFdSJHO6ghiTNU4eesI5bSxr0C3HHBiSvuulti6o29AIYOv9HRkUQLmkY+MU78B4J75D1IPgqP/A5c+hr++k9vfx6nRawz9begJ61jR0mU9OF0B3xaFJNBEz/4jAhCfS1ed2PAd3MwxACrr9aZa5eKx9nBYhc8aovvRbJXcvJWXLzdum3te0sXsb48VSQkUY1K4kVPU14JJFu6mwQPeTvV1IeaxYkYLh1FVDumi5eNv/xBGjOkhcXxp47MXYNpHy5IkvkR2GIiARPK09h2gswEAhDCs0v8zuXH4PTIXRTcNBujwnOAssWEU8pDLgrJVUpdFDbb250YaUXugklEUimJWP3G3FCRqTro4X60Fe2bhg6v78v/dc=
