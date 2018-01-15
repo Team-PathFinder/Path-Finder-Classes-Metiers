@@ -16,6 +16,7 @@
 
 
     <!--ici c'est la que tout se joue avec bintray-->
+    
     <repositories>
         <repository>
             <snapshots>
