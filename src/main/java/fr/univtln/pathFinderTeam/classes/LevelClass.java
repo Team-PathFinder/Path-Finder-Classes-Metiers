@@ -5,6 +5,11 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
+@NamedQueries(
+        {
+                @NamedQuery(name = "findByName", query = "select l from LevelClass l where l.name=:pName")
+        }
+)
 public class LevelClass {
 
     @Id

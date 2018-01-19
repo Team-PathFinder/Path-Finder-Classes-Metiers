@@ -7,6 +7,11 @@ import javax.validation.constraints.Min;
 import java.util.List;
 
 @Entity
+@NamedQueries(
+        {
+                @NamedQuery(name = "findByName", query = "select rp from RPCharacter rp where rp.name=:pName")
+        }
+)
 public class RPCharacter {
 
     @Id
