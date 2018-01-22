@@ -2,9 +2,16 @@ package fr.univtln.pathFinderTeam.classes;
 
 
 
+import fr.univtln.pathFinderTeam.classes.utilites.Properties;
+
 import javax.persistence.*;
 
 @Entity
+@NamedQueries(
+    {
+        @NamedQuery(name = Properties.FIND_RACE_BY_NAME, query = "select r from Race rp where r.name=:pName")
+    }
+)
 public class Race {
 
     @Id

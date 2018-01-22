@@ -60,18 +60,26 @@
     </pluginRepositories>
 
     <!--truc d'ysee a changer-->
-    <profiles>
-        <profile>
-            <id>stage-devel-bintray</id>
-            <distributionManagement>
-                <repository>
-                    <id>bintray-clemzux-pathfinderproject</id>
-                    <name>clemzux-pathfinderproject</name>
-                    <url>https://api.bintray.com/maven/clemzux/pathfinderproject/${projectShortName}/;publish=1</url>
-                </repository>
-            </distributionManagement>
-        </profile>
-    </profiles>
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>stage-devel-bintray</id>-->
+            <!--<distributionManagement>-->
+                <!--<repository>-->
+                    <!--<id>bintray-clemzux-pathfinderproject</id>-->
+                    <!--<name>clemzux-pathfinderproject</name>-->
+                    <!--<url>https://api.bintray.com/maven/clemzux/pathfinderproject/${projectShortName}/;publish=1</url>-->
+                <!--</repository>-->
+            <!--</distributionManagement>-->
+        <!--</profile>-->
+    <!--</profiles>-->
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-clemzux-pathfinderproject</id>
+            <name>clemzux-pathfinderproject</name>
+            <url>https://api.bintray.com/maven/clemzux/pathfinderproject/${projectShortName}/;publish=1</url>
+        </repository>
+    </distributionManagement>
 
 
     <parent>
@@ -84,7 +92,8 @@
     <groupId>fr.univtln.pathFinderTeam</groupId>
     <artifactId>Path-Finder-Classes-Metiers</artifactId>
 
-    <version>1.2-SNAPSHOT</version>
+    <!--<version>1.2-SNAPSHOT</version>-->
+    <version>1.0</version>
 
     <packaging>jar</packaging>
     <!-- ADAPTER les coordonnées -->

@@ -1,8 +1,15 @@
 package fr.univtln.pathFinderTeam.classes;
 
+import fr.univtln.pathFinderTeam.classes.utilites.Properties;
+
 import javax.persistence.*;
 
 @Entity
+@NamedQueries(
+    {
+        @NamedQuery(name = Properties.FIND_SPECIAL_BY_NAME, query = "select s from Special s where s.name=:pName")
+    }
+)
 public class Special {
 
     @Id

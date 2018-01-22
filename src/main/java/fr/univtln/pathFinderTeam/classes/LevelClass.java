@@ -1,14 +1,16 @@
 package fr.univtln.pathFinderTeam.classes;
 
 
+import fr.univtln.pathFinderTeam.classes.utilites.Properties;
+
 import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
 @NamedQueries(
-        {
-                @NamedQuery(name = "findByName", query = "select l from LevelClass l where l.name=:pName")
-        }
+    {
+        @NamedQuery(name = Properties.FIND_LEVELCLASS_BY_NAME, query = "select l from LevelClass l where l.name=:pName")
+    }
 )
 public class LevelClass {
 

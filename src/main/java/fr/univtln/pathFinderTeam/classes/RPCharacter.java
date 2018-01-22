@@ -1,6 +1,8 @@
 package fr.univtln.pathFinderTeam.classes;
 
 
+import fr.univtln.pathFinderTeam.classes.utilites.Properties;
+
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 
@@ -8,9 +10,9 @@ import java.util.List;
 
 @Entity
 @NamedQueries(
-        {
-                @NamedQuery(name = "findByName", query = "select rp from RPCharacter rp where rp.name=:pName")
-        }
+    {
+        @NamedQuery(name = Properties.FIND_CHARACTER_BY_NAME, query = "select rp from RPCharacter rp where rp.name=:pName")
+    }
 )
 public class RPCharacter {
 
@@ -22,7 +24,6 @@ public class RPCharacter {
     private Race race;
 
     @ManyToMany(cascade=CascadeType.PERSIST)
-    @Column(nullable = false)
     private List<LevelClass> levels;
 
     @Column(nullable = false)
