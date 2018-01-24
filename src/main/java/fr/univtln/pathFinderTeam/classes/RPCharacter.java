@@ -20,10 +20,10 @@ public class RPCharacter {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int Id;
 
-    @ManyToOne(cascade=CascadeType.PERSIST)
+    @ManyToOne(cascade=CascadeType.REFRESH)
     private Race race;
 
-    @ManyToMany(cascade=CascadeType.PERSIST)
+    @ManyToMany(cascade=CascadeType.REFRESH)
     private List<LevelClass> levels;
 
     @Column(nullable = false)

@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Entity
 @NamedQueries(
     {
-        @NamedQuery(name = Properties.FIND_RACE_BY_NAME, query = "select r from Race rp where r.name=:pName")
+        @NamedQuery(name = Properties.FIND_RACE_BY_NAME, query = "select r from Race r where r.name=:pName")
     }
 )
 public class Race {
